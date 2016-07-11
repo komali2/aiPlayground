@@ -1,0 +1,17 @@
+{
+  "name": "aiPlayground",
+  "homepage": "https://github.com/komali2/aiPlayground",
+  "authors": [
+    "komali2 <rogersjcaleb@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
