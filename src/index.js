@@ -13,4 +13,11 @@ rect.fill = 'rbg(0, 200, 255)';
 rect.opacity = 0.75;
 rect.noStroke();
 
+document.onReady
+
 two.update();
+
+var map = new Grid(10, 5);
+
+console.log(map.area);
+console.dir(map.matrix);
