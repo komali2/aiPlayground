@@ -5,18 +5,15 @@ class Grid {
   constructor(width, height){
     this.height = height;
     this.width = width;
+    this.matrix = this.generateGrid(height, width);
+  }
+
+  getMatrix(){
+    return this.matrix;
   }
 
   get area(){
-    return this.calcArea();
-  }
-
-  calcArea(){
-    return this.height * this.width;
-  }
-
-  get matrix(){
-    return this.generateGrid(this.height, this.width)
+    return this.width * this.height;
   }
 
   generateGrid(height, width){
