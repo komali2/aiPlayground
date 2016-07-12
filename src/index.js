@@ -19,5 +19,5 @@ two.update();
 
 var map = new Grid(10, 5);
 
-console.log(map.area);
-console.dir(map.getMatrix());
+
+map.printMatrix();

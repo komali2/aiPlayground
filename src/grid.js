@@ -26,4 +26,21 @@ class Grid {
     }
     return arr;
   }
+
+  changeCoordinateValue(x, y, val){
+    this.matrix[y][x] = val;
+  }
+
+  printMatrix(){
+    var matrix = this.getMatrix();
+    var str = "";
+    for(var i = 0; i < matrix.length; i++){
+      for(var j = 0; j < matrix[i].length; j++){
+        str = str + matrix[i][j];
+      }
+      str = str + '\n';
+
+    }
+    console.log(str);
+  }
 }
