@@ -1,4 +1,7 @@
 var NONE = 1;
+var PACMAN = 2;
+var WALL = 3;
+var GOAL = 5;
 
 
 class Grid {
