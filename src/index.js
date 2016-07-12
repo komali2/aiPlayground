@@ -19,5 +19,5 @@ two.update();
 
 var map = new Grid(10, 5);
 
-
+map.changeCoordinateValue(3, 2, 2);
 map.printMatrix();
