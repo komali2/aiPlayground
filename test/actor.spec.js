@@ -21,15 +21,15 @@ describe('Actor Class', ()=>{
   describe('Actor Methods', ()=>{
     describe('Getters', ()=>{
       it('should have a getter method for its location', ()=>{
-        expect(actor.coords).to.equal([x, y]);
+        expect(actor.getCoords).to.deep.equal([x, y]);
       });
 
       it('should have a getter method for its x location', ()=>{
-        expect(actor.x).to.equal(x);
+        expect(actor.getX).to.equal(x);
       });
 
       it('should have a getter method for its y location', ()=>{
-        expect(actor.y).to.equal(y);
+        expect(actor.getY).to.equal(y);
       });
     });
     describe('Setters', ()=>{
