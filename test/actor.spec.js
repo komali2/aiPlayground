@@ -41,7 +41,7 @@ describe('Actor Class', ()=>{
         var newX = 3;
         var newY = 4;
         actor.moveTo(newX, newY);
-        expect(actor.coords).to.equal([newX, newY]);
+        expect(actor.getCoords).to.deep.equal([newX, newY]);
         expect(actor.x).to.equal(newX);
         expect(actor.y).to.equal(newY);
       });

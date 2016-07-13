@@ -21,7 +21,11 @@ class Actor{
     return [this.getX, this.getY];
   }
 
-  //
+  //change coords
+  moveTo(newX, newY){
+    this.setX = newX;
+    this.setY = newY;
+  }
 
 
 
