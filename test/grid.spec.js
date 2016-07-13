@@ -1,7 +1,7 @@
 describe('Grid Class', ()=>{
-  var x = 5;
-  var y = 5;
-  var grid = new Grid(x, y);
+  var width = 5;
+  var height = 5;
+  var grid = new Grid(width, height);
   describe('Class Bits', ()=>{
     it('should exist', ()=>{
       expect(Grid).to.exist;
@@ -32,7 +32,7 @@ describe('Grid Class', ()=>{
     });
 
     it('should return a good area', ()=>{
-      expect(grid.area).to.equal(x * y);
+      expect(grid.area).to.equal(width * height);
     })
 
     it('should change values with its changeCoordinateValue function', ()=>{
