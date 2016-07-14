@@ -9,6 +9,11 @@ class Grid {
     this.height = height;
     this.width = width;
     this.matrix = this.generateGrid(height, width);
+    this.actorStorage = {};
+  }
+
+  setActor(actor, name){
+    this.actorStorage[name] = actor;
   }
 
   getMatrix(){

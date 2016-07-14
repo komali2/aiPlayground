@@ -1,8 +1,16 @@
+var NONE = 1;
+var PACMAN = 2;
+var WALL = 3;
+var GOAL = 5;
+
+
+
 describe('Actor Class', ()=>{
   var x = 1;
   var y = 2;
-
-  var actor = new Actor(x, y);
+  var grid = new Grid(10, 10);
+  var actor = new Actor(x, y, grid);
+  grid.setActor(actor, 'pacman', PACMAN);
 
   describe('Class Bits', ()=>{
     it('should exist', ()=>{
@@ -109,5 +117,13 @@ describe('Actor Class', ()=>{
       });
     });
 
+
+
+  });
+
+  describe('Actor Matrix interaction', ()=>{
+    it('should properly save the graph on the actor', ()=>{
+      expect(actor.grid).to.equal(grid);
+    });
   });
 });
