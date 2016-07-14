@@ -39,6 +39,20 @@ class Actor{
   moveWest(){
     this.setX = this.x - 1;
   }
+  moveDirection(direction){
+    if(direction === 'north'){
+      this.moveNorth();
+    }
+    else if(direction === 'south'){
+      this.moveSouth();
+    }
+    else if(direction === 'east'){
+      this.moveEast();
+    }
+    else if(direction === 'west'){
+      this.moveWest();
+    }
+  }
 
 
 

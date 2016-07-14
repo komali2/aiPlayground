@@ -89,6 +89,24 @@ describe('Actor Class', ()=>{
         expect(actor.x).to.equal(1);
         expect(actor.y).to.equal(2);
       });
+
+      it('should have a moveX direction method', ()=>{
+        expect(actor.moveDirection).to.be.a('function');
+      });
+      it('should moveDirection to proper coords', ()=>{
+        actor.moveTo(2, 2);
+        actor.moveDirection('north');
+        expect(actor.getCoords).to.deep.equal([2, 1]);
+        actor.moveTo(2, 2);
+        actor.moveDirection('south');
+        expect(actor.getCoords).to.deep.equal([2, 3]);
+        actor.moveTo(2, 2);
+        actor.moveDirection('east');
+        expect(actor.getCoords).to.deep.equal([3, 2]);
+        actor.moveTo(2, 2);
+        actor.moveDirection('west');
+        expect(actor.getCoords).to.deep.equal([1, 2]);
+      });
     });
 
   });
