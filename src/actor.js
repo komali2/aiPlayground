@@ -27,6 +27,19 @@ class Actor{
     this.setY = newY;
   }
 
+  moveNorth(){
+    this.setY = this.y - 1;
+  }
+  moveSouth(){
+    this.setY = this.y + 1;
+  }
+  moveEast(){
+    this.setX = this.x + 1;
+  }
+  moveWest(){
+    this.setX = this.x - 1;
+  }
+
 
 
 }

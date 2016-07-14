@@ -52,7 +52,7 @@ describe('Actor Class', ()=>{
       it('should moveNorth to the proper coords', ()=>{
         actor.moveTo(2, 2);
         actor.moveNorth();
-        expect(actor.coords).to.equal([2, 1]);
+        expect(actor.getCoords).to.deep.equal([2, 1]);
         expect(actor.x).to.equal(2);
         expect(actor.y).to.equal(1);
       });
@@ -63,7 +63,7 @@ describe('Actor Class', ()=>{
       it('should moveSouth to the proper coords', ()=>{
         actor.moveTo(2, 2);
         actor.moveSouth();
-        expect(actor.coords).to.equal([2, 3]);
+        expect(actor.getCoords).to.deep.equal([2, 3]);
         expect(actor.x).to.equal(2);
         expect(actor.y).to.equal(3);
       });
@@ -74,7 +74,7 @@ describe('Actor Class', ()=>{
       it('should moveEast to the proper coords', ()=>{
         actor.moveTo(2, 2);
         actor.moveEast();
-        expect(actor.coords).to.equal([3, 2]);
+        expect(actor.getCoords).to.deep.equal([3, 2]);
         expect(actor.x).to.equal(3);
         expect(actor.y).to.equal(2);
       });
@@ -85,7 +85,7 @@ describe('Actor Class', ()=>{
       it('should moveWest to the proper coords', ()=>{
         actor.moveTo(2, 2);
         actor.moveWest();
-        expect(actor.coords).to.equal([1, 2]);
+        expect(actor.getCoords).to.deep.equal([1, 2]);
         expect(actor.x).to.equal(1);
         expect(actor.y).to.equal(2);
       });
