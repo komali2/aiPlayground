@@ -104,15 +104,24 @@ describe('Actor Class', ()=>{
         actor.moveTo(2, 2);
         actor.moveDirection('north');
         expect(actor.getCoords).to.deep.equal([2, 1]);
+        expect(actor.myGrid.getAt(2, 1)).to.equal(PACMAN);
+        expect(grid.getAt(2, 1)).to.equal(PACMAN);
         actor.moveTo(2, 2);
         actor.moveDirection('south');
         expect(actor.getCoords).to.deep.equal([2, 3]);
+        expect(actor.myGrid.getAt(2, 3)).to.equal(PACMAN);
+        expect(grid.getAt(2, 3)).to.equal(PACMAN);
         actor.moveTo(2, 2);
         actor.moveDirection('east');
         expect(actor.getCoords).to.deep.equal([3, 2]);
+        expect(actor.myGrid.getAt(3, 2)).to.equal(PACMAN);
+        expect(grid.getAt(3, 2)).to.equal(PACMAN);
         actor.moveTo(2, 2);
         actor.moveDirection('west');
         expect(actor.getCoords).to.deep.equal([1, 2]);
+        expect(actor.myGrid.getAt(1, 2)).to.equal(PACMAN);
+        expect(grid.getAt(1, 2)).to.equal(PACMAN);
+
       });
     });
 
