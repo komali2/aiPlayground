@@ -139,5 +139,8 @@ describe('Actor Class', ()=>{
       actor.moveTo(x, y);
       expect(actor.myGrid.getAt(5, 5)).to.equal(PACMAN);
     });
+    it('should save the actor on the graph', ()=>{
+        expect(grid.getActor(PACMAN)).to.exist;
+    });
   });
 });

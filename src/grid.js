@@ -24,6 +24,14 @@ class Grid {
     return this.width * this.height;
   }
 
+  get actors(){
+    return this.actorStorage;
+  }
+
+  getActor(actor){
+    return this.actorStorage[actor].getCoords;
+  }
+
   generateGrid(height, width){
     var arr = [];
     for(var y = 0; y < height; y++){
