@@ -51,4 +51,8 @@ class Grid {
     }
     console.log(str);
   }
+
+  getAt(x, y){
+    return this.getMatrix()[y][x];
+  }
 }

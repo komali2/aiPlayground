@@ -12,6 +12,7 @@ class Actor{
     this.grid = grid;
     this.actorName = actorName;
     this.grid.changeCoordinateValue(x, y, actorName);
+    this.grid.setActor(this, actorName);
   }
 
   //getters and setters
@@ -30,11 +31,17 @@ class Actor{
   get getCoords(){
     return [this.getX, this.getY];
   }
+  get myGrid(){
+    return this.grid;
+  }
 
   //change coords
   moveTo(newX, newY){
+    this.resetMyPreviousLocation();
     this.setX = newX;
     this.setY = newY;
+    this.setMyNewLocation();
+
 
   }
 

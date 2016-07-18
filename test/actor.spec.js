@@ -9,8 +9,7 @@ describe('Actor Class', ()=>{
   var x = 1;
   var y = 2;
   var grid = new Grid(10, 10);
-  var actor = new Actor(x, y, grid);
-  grid.setActor(actor, 'pacman', PACMAN);
+  var actor = new Actor(x, y, grid, PACMAN);
 
   describe('Class Bits', ()=>{
     it('should exist', ()=>{
@@ -124,6 +123,12 @@ describe('Actor Class', ()=>{
   describe('Actor Matrix interaction', ()=>{
     it('should properly save the graph on the actor', ()=>{
       expect(actor.grid).to.equal(grid);
+    });
+    it('should reflect massive moves', ()=>{
+      var x = 5;
+      var y = 5;
+      actor.moveTo(x, y);
+      expect(actor.myGrid.getAt(5, 5)).to.equal(PACMAN);
     });
   });
 });
