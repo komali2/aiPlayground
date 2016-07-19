@@ -20,4 +20,21 @@ describe('Pacman Class', ()=>{
   it('should allow new isntances of itself', ()=>{
     expect(pacman).to.be.an.instanceof(Pacman);
   });
+  it('should have all actor methods', ()=>{
+    expect(pacman.getX).to.exist;
+    expect(pacman.getY).to.exist;
+    expect(pacman.moveTo).to.exist;
+  });
+  it('should check if it can move before moving', ()=>{
+    grid.changeCoordinateValue(2, 5, WALL);
+    grid.changeCoordinateValue(2, 3, WALL);
+    grid.changeCoordinateValue(1, 5, WALL);
+    grid.changeCoordinateValue(3, 5, WALL);
+    expect(pacman.canMoveTo(2, 5)).to.equal(false);
+    expect(pacman.canMoveTo(2, 3)).to.equal(false);
+    expect(pacman.canMoveTo(1, 5)).to.equal(false);
+    expect(pacman.canMoveTo(3, 5)).to.equal(false);
+
+
+  });
 });
