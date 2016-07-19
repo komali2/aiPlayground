@@ -37,4 +37,20 @@ describe('Pacman Class', ()=>{
 
 
   });
+  it('should know where it can move next', ()=>{
+    pacman.moveTo(2, 6);
+    var available = pacman.getAvailableMoves();
+    var flag = false;
+    for(var i = 0; i < available.length; i++){
+      if(_.isEqual(available[i], [3, 6])){
+        flag = true;
+      }
+    }
+    expect(flag).to.equal(true);
+
+  });
 });
+
+
+var newGrid = new Grid(10, 10);
+newGrid.printMatrix();

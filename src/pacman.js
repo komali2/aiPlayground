@@ -23,6 +23,29 @@ class Pacman extends Actor{
     }
   }
 
+  getAvailableMoves(){
+    var x = this.x;
+    var y = this.y;
+    var arrOut = [];
+    //can he move west
+    if(this.canMoveTo(x-1, y)){
+      arrOut.push([x-1, y-1]);
+    }
+    //can he move east
+    if(this.canMoveTo(x + 1, y)){
+      arrOut.push([x + 1, y]);
+    }
+    //can he move north
+    if(this.canMoveTo(x, y - 1)){
+      arrOut.push([x, y - 1]);
+    }
+    //can he move south
+    if(this.canMoveTo(x, y + 1)){
+      arrOut.push([x, y + 1]);
+    }
+    return arrOut;
+  }
+
 
 
 }
