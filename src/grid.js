@@ -55,7 +55,6 @@ class Grid {
         str = str + matrix[i][j];
       }
       str = str + '\n';
-
     }
     console.log(str);
   }
