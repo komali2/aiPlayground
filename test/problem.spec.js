@@ -14,9 +14,11 @@ describe('Problem Class', ()=>{
     expect(Problem).to.exist;
   });
   it('should be a child of Grid', ()=>{
-    expect(Problem).to.be.an.instanceof(Grid);
+    expect(problem1).to.be.an.instanceof(Grid);
   });
   it('should allow new instances of itself', ()=>{
     expect(problem1).to.be.an.instanceof(Problem);
   });
+  problem1.createExample(1);
+  problem1.printMatrix();
 });

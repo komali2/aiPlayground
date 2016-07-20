@@ -38,7 +38,7 @@ class Problem extends Grid{
         }
         this.changeCoordinateValue(8, 7, WALL);
         this.changeCoordinateValue(8, 8, WALL);
-        this.changeCoordinateValue(9, 9, WALL);
+        this.changeCoordinateValue(9, 9, GOAL);
         break;
       default:
         this.matrix = this.matrix;
