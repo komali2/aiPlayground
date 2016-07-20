@@ -50,6 +50,49 @@ class Problem extends Grid{
   }
 
   getSuccessors(x, y){
-    
+    return this.getAvailableMoves(x, y);
   }
+
+
+
+
+
+
+
+  canMoveTo(x, y){
+    if(x >= 0 && y >= 0 && x < this.width && y < this.height){
+      if(this.getAt(x, y) !== WALL){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
+    else{
+      return false;
+    }
+  }
+
+  getAvailableMoves(x, y){
+
+    var arrOut = [];
+    //can he move west
+    if(this.canMoveTo(x-1, y)){
+      arrOut.push([x-1, y-1, 'w']);
+    }
+    //can he move east
+    if(this.canMoveTo(x + 1, y)){
+      arrOut.push([x + 1, y, 'e']);
+    }
+    //can he move north
+    if(this.canMoveTo(x, y - 1)){
+      arrOut.push([x, y - 1, 'n']);
+    }
+    //can he move south
+    if(this.canMoveTo(x, y + 1)){
+      arrOut.push([x, y + 1, 's']);
+    }
+    return arrOut;
+  }
+
 }

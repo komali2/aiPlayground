@@ -37,4 +37,6 @@ describe('Problem Class', ()=>{
     });
   });
   problem1.printMatrix();
+  console.log(problem1.getSuccessors(0, 0));
+  console.log(problem1.getSuccessors(9, 8));
 });
