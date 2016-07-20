@@ -9,6 +9,8 @@ describe('Problem Class', ()=>{
 
   var problem1 = new Problem(x, y);
   var pacman = new Pacman(0, 0, problem1);
+  problem1.createExample(1);
+
 
   it('should exist', ()=>{
     expect(Problem).to.exist;
@@ -19,6 +21,20 @@ describe('Problem Class', ()=>{
   it('should allow new instances of itself', ()=>{
     expect(problem1).to.be.an.instanceof(Problem);
   });
-  problem1.createExample(1);
+  describe('Methods', ()=>{
+    it('should have a isGoalState method', ()=>{
+      expect(problem1.isGoalState).to.exist;
+    });
+    it('should properly report if a given state is the goal state', ()=>{
+      expect(problem1.isGoalState(9, 9)).to.equal(true);
+      expect(problem1.isGoalState(8, 8)).to.equal(false);
+    });
+    it('should have a getSuccessors method', ()=>{
+      expect(problem1.getSuccessors).to.exist;
+    });
+    it('should return an array of possible movements', ()=>{
+      expect(problem1.getSuccessors(0, 0)).to.be.an.instanceof(Array);
+    });
+  });
   problem1.printMatrix();
 });

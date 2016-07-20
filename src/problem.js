@@ -44,4 +44,12 @@ class Problem extends Grid{
         this.matrix = this.matrix;
     }
   }
+
+  isGoalState(x, y){
+    return this.getAt(x, y) === GOAL;
+  }
+
+  getSuccessors(x, y){
+    
+  }
 }

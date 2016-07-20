@@ -50,7 +50,3 @@ describe('Pacman Class', ()=>{
 
   });
 });
-
-
-var newGrid = new Grid(10, 10);
-newGrid.printMatrix();
